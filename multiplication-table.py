@@ -20,13 +20,14 @@ Height of multiplication table: 8
   6  12  18  24  30  36  42  48  54  60
   7  14  21  28  35  42  49  56  63  70
   8  16  24  32  40  48  56  64  72  80
-"""
+
 width = input("Width of multiplication table: ")
 height = input("Height of multiplication table: ")
 width = (int(width))+1
-height = int(height)
-
+height = (int(height))+1
+"""
 for i in range(height):
     widthlist = list(range(width))
-    #for n in widthlist
-    print (widthlist)
+    #print (widthlist)
+    for i in widthlist:
+        print(i)
