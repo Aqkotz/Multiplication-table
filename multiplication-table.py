@@ -1,7 +1,7 @@
 """
 multiplication-table.py
 Author: Andy
-Credit: none
+Credit: Daniel Melnikov, John Warhold, Daniel Melnikov, https://docs.python.org/2/library/functions.html#len
 Assignment:
 
 Write and submit a Python program that prints a multiplication table. The user 
@@ -23,11 +23,13 @@ Height of multiplication table: 8
 """
 width = input("Width of multiplication table: ")
 height = input("Height of multiplication table: ")
-width = (int(width))+1
-height = (int(height))+1
-
-for i in range(height):
-    widthlist = list(range(width))
-    #print (widthlist)
-    for j in widthlist:
-        print(i,j,end="")
+width = (int(width))
+height = (int(height))
+columnwidth = len(str(height*width))+1
+numval=""
+for i in range(1,height+1):
+    numval=""
+    for j in range(1,width+1):
+        k=i*j
+        numval = numval + str(k).rjust(columnwidth,' ')
+    print(numval)
